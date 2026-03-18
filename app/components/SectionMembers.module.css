@@ -11,12 +11,31 @@
 .card {
 }
 
+.card {
+  overflow: visible;
+}
+
 .cardImg {
   aspect-ratio: 3/4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+}
+
+.texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + var(--grid) * 2);
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transform: rotate(15deg);
+  transform-origin: top left;
+}
+
+.portrait {
+  object-fit: contain;
+  object-position: bottom;
+  z-index: 11;
 }
 
 .cardInitial {
@@ -73,5 +92,10 @@
   .grid {
     grid-template-columns: 1fr;
     max-width: calc(var(--grid) * 6);
+  }
+
+  .texture {
+    width: calc(100% + var(--grid) * 3);
+    transform: none;
   }
 }

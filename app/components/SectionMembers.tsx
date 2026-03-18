@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {MEMBERS} from "../data/members";
 import s from "./SectionMembers.module.css";
 
@@ -9,9 +10,21 @@ export default function SectionMembers() {
         {MEMBERS.map((m) => (
           <div className={s.card} key={m.nameJa}>
             <div className={s.cardImg}>
-              <span className={`${s.cardInitial} global-text-xl`}>
-                {m.initials}
-              </span>
+              <Image
+                src={m.bg}
+                alt=""
+                width={800}
+                height={600}
+                className={s.texture}
+                aria-hidden
+              />
+              <Image
+                src={m.portrait}
+                alt={m.nameEn}
+                fill
+                sizes="(max-width: 768px) 60vw, 30vw"
+                className={s.portrait}
+              />
             </div>
             <div className={s.cardBody}>
               <p className={`${s.cardNameJa} global-text-xl`}>{m.nameJa}</p>
