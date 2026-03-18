@@ -5,7 +5,6 @@ import s from "./Nav.module.css";
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Members", href: "#members" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Nav() {

@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   bottom: calc(var(--grid) / 2);
-  right: calc(var(--grid) / 2);
+  right: var(--grid);
   display: flex;
   align-items: flex-end;
   gap: calc(var(--grid) / 4);

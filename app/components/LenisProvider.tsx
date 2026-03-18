@@ -33,7 +33,8 @@ export default function LenisProvider({
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      lenis.scrollTo(target as HTMLElement);
+      const offset = -1 * parseFloat(getComputedStyle(document.documentElement).fontSize) * 5;
+      lenis.scrollTo(target as HTMLElement, { offset });
     }
 
     document.addEventListener("click", handleClick);
