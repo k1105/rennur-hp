@@ -9,8 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/d3-ease": "^3.0.2",
+    "@types/p5": "^1.7.7",
+    "d3-ease": "^3.0.1",
     "lenis": "^1.3.18",
     "next": "16.1.7",
+    "p5": "^2.2.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

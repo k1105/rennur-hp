@@ -1,4 +1,5 @@
 import s from "./top.module.css";
+// import GrainBackground from "./components/GrainBackground";
 import SectionAbout from "./components/SectionAbout";
 import SectionMembers from "./components/SectionMembers";
 import SectionContact from "./components/SectionContact";
@@ -6,7 +7,9 @@ import SectionContact from "./components/SectionContact";
 export default function Page() {
   return (
     <div className={s.body}>
+      {/* <GrainBackground /> */}
       <div className={s.main}>
+        <div className={s.hero} />
         <div className={s.section}>
           <SectionAbout />
         </div>

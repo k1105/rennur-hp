@@ -1,8 +1,12 @@
 .foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: calc(var(--grid) / 4) var(--grid);
-  margin-top: auto;
+  padding: calc(var(--grid) / 4) calc(var(--grid) / 2);
+  z-index: 20;
 }
 
 .foot span {

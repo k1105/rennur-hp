@@ -16,7 +16,7 @@
 }
 
 .logoWrap {
-  width: calc(var(--grid) * 8);
+  width: calc(var(--grid) * 18);
   max-width: 90vw;
 }
 

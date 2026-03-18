@@ -3,7 +3,7 @@ import s from "./SectionContact.module.css";
 export default function SectionContact() {
   return (
     <section id="contact" className={s.section}>
-      <p className="lbl global-text-md">Work with us</p>
+      <p className="lbl global-text-lg">Work with us</p>
       <div className={s.ctaWrap}>
         <p className={`${s.ctaJa} global-text-md`}>
           rennurは現在、
@@ -20,14 +20,14 @@ export default function SectionContact() {
           production.
         </p>
         <div className={s.ctaLinks}>
-          <a href="mailto:hello@rennur.jp" className="cta-btn global-text-sm">
+          <a href="mailto:hello@rennur.jp" className="cta-btn global-text-lg">
             Mail →
           </a>
           <a
             href="https://instagram.com/rennur.jp"
             target="_blank"
             rel="noopener noreferrer"
-            className="cta-btn global-text-sm"
+            className="cta-btn global-text-lg"
           >
             Instagram →
           </a>

@@ -25,9 +25,12 @@
   }
 }
 
+html {
+  background: var(--bg);
+}
+
 html,
 body {
-  background: var(--bg);
   color: var(--ink);
   overscroll-behavior: none;
   overflow-x: hidden;
@@ -40,7 +43,7 @@ a {
 
 .root {
   font-family: var(--en);
-  background: var(--bg);
+  background: transparent;
   color: var(--ink);
   min-height: 100svh;
   font-size: 13px;
@@ -106,8 +109,6 @@ section[id] {
   color: var(--faint);
   margin-bottom: calc(var(--grid) / 2);
   font-weight: 300;
-  border-left: 1.5px solid var(--rule2);
-  padding-left: calc(var(--grid) / 2);
 }
 
 .cta-btn {
@@ -128,7 +129,8 @@ section[id] {
 
 .global-text-xl {
   font-size: 2rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.8;
 }
 
 .global-text-lg {

@@ -4,8 +4,17 @@
   margin: 0;
 }
 
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-left: calc(var(--grid) * -1);
+}
+
+
 .main {
-  padding-top: 100vh;
+  padding-top: 0;
 }
 
 .section {

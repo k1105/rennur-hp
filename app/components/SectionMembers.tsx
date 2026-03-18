@@ -5,7 +5,7 @@ import s from "./SectionMembers.module.css";
 export default function SectionMembers() {
   return (
     <section id="members" className={s.section}>
-      <p className="lbl global-text-md">Members</p>
+      <p className="lbl global-text-lg">Members</p>
       <div className={s.grid}>
         {MEMBERS.map((m) => (
           <div className={s.card} key={m.nameJa}>
@@ -31,6 +31,7 @@ export default function SectionMembers() {
               <p className={`${s.cardNameEn} global-text-md`}>{m.nameEn}</p>
               <p className={`${s.cardRole} global-text-md`}>{m.role}</p>
               <p className={`${s.cardBio} global-text-lg`}>{m.bio}</p>
+              <p className={`${s.cardBioEn} global-text-sm`}>{m.bioEn}</p>
               <div className={s.cardTags}>
                 {m.tags.map((t) => (
                   <span className={`${s.tag} global-text-sm`} key={t}>

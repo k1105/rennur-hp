@@ -1,14 +1,13 @@
 .nav {
   position: fixed;
-  bottom: calc(var(--grid) / 2);
-  right: var(--grid);
-  display: flex;
-  align-items: flex-end;
-  gap: calc(var(--grid) / 4);
+  inset: 0;
   z-index: 20;
+  pointer-events: none;
 }
 
 .link {
+  position: absolute;
+  pointer-events: auto;
   color: var(--faint);
   cursor: pointer;
   letter-spacing: 0.08em;
@@ -18,8 +17,10 @@
   font-family: var(--en);
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.link:hover {
-  color: var(--ink);
+.link:hover,
+.active {
+  color: #1c975e;
 }

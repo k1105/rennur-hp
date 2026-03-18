@@ -75,6 +75,13 @@
   margin-bottom: calc(var(--grid) / 4);
 }
 
+.cardBioEn {
+  color: var(--faint);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: calc(var(--grid) / 4);
+}
+
 .cardTags {
   display: flex;
   flex-wrap: wrap;

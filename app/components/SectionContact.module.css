@@ -1,5 +1,6 @@
 .section {
   max-width: calc(var(--grid) * 8);
+  min-height: calc(100vh - 5rem - var(--grid) * 2 - var(--grid) / 4 - var(--grid) / 4);
 }
 
 /* ── cta ── */
