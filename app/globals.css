@@ -26,11 +26,13 @@ body {
 }
 
 html.lenis {
-  height: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 html.lenis body {
-  height: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -47,6 +49,8 @@ a {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
 
 /* ── shared ── */

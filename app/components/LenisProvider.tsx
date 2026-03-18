@@ -11,7 +11,12 @@ export default function LenisProvider({
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    const wrapper = document.querySelector(".root") as HTMLElement;
+    if (!wrapper) return;
+
     const lenis = new Lenis({
+      wrapper,
+      content: wrapper,
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
@@ -33,7 +38,10 @@ export default function LenisProvider({
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset = -1 * parseFloat(getComputedStyle(document.documentElement).fontSize) * 5;
+      const offset =
+        -1 *
+        parseFloat(getComputedStyle(document.documentElement).fontSize) *
+        5;
       lenis.scrollTo(target as HTMLElement, { offset });
     }
 
