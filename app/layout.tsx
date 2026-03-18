@@ -24,21 +24,21 @@ export default function RootLayout({
         <Suspense>
           <GridOverlay />
         </Suspense>
+        <div className={s.hero}>
+          <div className={s.logoWrap}>
+            <Image
+              src="/logo.svg"
+              alt="rennur"
+              width={474}
+              height={87}
+              className={s.logo}
+              priority
+            />
+          </div>
+        </div>
         <LenisProvider>
           <div className="root">
             <Nav />
-            <div className={s.hero}>
-              <div className={s.logoWrap}>
-                <Image
-                  src="/logo.svg"
-                  alt="rennur"
-                  width={474}
-                  height={87}
-                  className={s.logo}
-                  priority
-                />
-              </div>
-            </div>
             <div className="page">{children}</div>
             <Footer />
           </div>

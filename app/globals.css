@@ -19,20 +19,17 @@
   --grid: 5vw;
 }
 
+@media (pointer: coarse) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 html,
 body {
   background: var(--bg);
   color: var(--ink);
-}
-
-html.lenis {
-  height: 100%;
-  overflow: hidden;
-}
-
-html.lenis body {
-  height: 100%;
-  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 a {
@@ -44,13 +41,11 @@ a {
   font-family: var(--en);
   background: var(--bg);
   color: var(--ink);
-  min-height: 100vh;
+  min-height: 100svh;
   font-size: 13px;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow: auto;
 }
 
 /* ── shared ── */

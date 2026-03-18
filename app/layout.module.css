@@ -5,20 +5,19 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   z-index: 10;
   mix-blend-mode: difference;
+  transition: height 0.3s ease;
 }
 
 .logoWrap {
-  width: 100%;
-  max-width: calc(var(--grid) * 8);
-  padding: 0 calc(var(--grid) / 2);
+  width: calc(var(--grid) * 8);
+  max-width: 90vw;
 }
 
 .logo {

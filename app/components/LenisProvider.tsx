@@ -3,6 +3,10 @@
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+}
+
 export default function LenisProvider({
   children,
 }: {
@@ -11,14 +15,12 @@ export default function LenisProvider({
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    const wrapper = document.querySelector(".root") as HTMLElement;
-    if (!wrapper) return;
+    if (isTouchDevice()) return;
 
     const lenis = new Lenis({
-      wrapper,
-      content: wrapper,
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      overscroll: false,
     });
     lenisRef.current = lenis;
 
@@ -28,6 +30,12 @@ export default function LenisProvider({
     }
     requestAnimationFrame(raf);
 
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  useEffect(() => {
     function handleClick(e: MouseEvent) {
       const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>(
         'a[href^="#"]'
@@ -38,19 +46,20 @@ export default function LenisProvider({
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset =
-        -1 *
-        parseFloat(getComputedStyle(document.documentElement).fontSize) *
-        5;
-      lenis.scrollTo(target as HTMLElement, { offset });
+
+      if (lenisRef.current) {
+        const offset =
+          -1 *
+          parseFloat(getComputedStyle(document.documentElement).fontSize) *
+          5;
+        lenisRef.current.scrollTo(target as HTMLElement, { offset });
+      } else {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     }
 
     document.addEventListener("click", handleClick);
-
-    return () => {
-      document.removeEventListener("click", handleClick);
-      lenis.destroy();
-    };
+    return () => document.removeEventListener("click", handleClick);
   }, []);
 
   return <>{children}</>;
