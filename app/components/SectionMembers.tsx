@@ -31,7 +31,7 @@ export default function SectionMembers() {
               <p className={`${s.cardNameEn} global-text-md`}>{m.nameEn}</p>
               <p className={`${s.cardRole} global-text-md`}>{m.role}</p>
               <p className={`${s.cardBio} global-text-lg`}>{m.bio}</p>
-              <p className={`${s.cardBioEn} global-text-sm`}>{m.bioEn}</p>
+              <p className={`${s.cardBioEn} global-text-md`}>{m.bioEn}</p>
               <div className={s.cardTags}>
                 {m.tags.map((t) => (
                   <span className={`${s.tag} global-text-sm`} key={t}>

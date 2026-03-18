@@ -98,7 +98,7 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    max-width: calc(var(--grid) * 6);
+    max-width: calc(var(--grid) * 7);
   }
 
   .texture {
