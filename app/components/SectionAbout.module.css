@@ -1,0 +1,183 @@
+/* ── origin ── */
+.origin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--grid) / 4);
+  margin-bottom: var(--grid);
+}
+
+.oc {
+}
+
+.ok {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.ov {
+  font-family: var(--ja);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.ovEn {
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 4);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.od {
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ── arch card ── */
+.archCard {
+  border: 0.5px solid var(--rule2);
+  border-radius: 6px;
+  padding: calc(var(--grid) / 2);
+  margin-bottom: var(--grid);
+}
+
+.archJa {
+  font-family: var(--ja);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.archEn {
+  color: var(--faint);
+  letter-spacing: 0.07em;
+  margin-bottom: calc(var(--grid) / 2);
+  font-weight: 300;
+}
+
+.archGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--grid) / 4);
+}
+
+.ac {
+}
+
+.acName {
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.acJa {
+  font-family: var(--ja);
+  color: var(--ink2);
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
+.acEn {
+  color: var(--faint);
+  font-weight: 300;
+}
+
+/* ── skills ── */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--grid) / 4);
+  margin-bottom: var(--grid);
+}
+
+.sk {
+  padding: calc(var(--grid) / 4) calc(var(--grid) / 2);
+  border: 0.5px solid var(--rule2);
+  border-radius: 20px;
+  color: var(--muted);
+}
+
+.skCore {
+  composes: sk;
+  border-color: var(--ink);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── timeline ── */
+.tl {
+  list-style: none;
+  margin-bottom: var(--grid);
+}
+
+.tli {
+  display: grid;
+  grid-template-columns: var(--grid) 1fr;
+  gap: calc(var(--grid) / 2);
+  padding: calc(var(--grid) / 4) 0;
+  border-bottom: 0.5px solid var(--rule);
+  color: var(--muted);
+  font-weight: 300;
+  align-items: baseline;
+}
+
+.tli:last-child {
+  border-bottom: none;
+}
+
+.tly {
+  font-weight: 500;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.tlR {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tlOrg {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ── cta ── */
+.ctaWrap {
+  border-left: 1.5px solid var(--rule2);
+  padding: 0 0 0 calc(var(--grid) / 2);
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.ctaJa {
+  font-family: var(--ja);
+  line-height: 2.1;
+  color: var(--ink2);
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.ctaJa strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ctaEn {
+  line-height: 1.9;
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 4);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .origin {
+    grid-template-columns: 1fr;
+  }
+
+  .archGrid {
+    grid-template-columns: 1fr;
+  }
+}

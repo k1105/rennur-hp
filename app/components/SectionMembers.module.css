@@ -1,0 +1,74 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--grid) / 4);
+}
+
+.card {
+}
+
+.cardImg {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cardInitial {
+  font-family: var(--ja);
+  font-weight: 300;
+  color: rgba(240, 237, 232, 0.12);
+  letter-spacing: 0.02em;
+}
+
+.cardBody {
+}
+
+.cardNameJa {
+  font-family: var(--ja);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.cardNameEn {
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 4);
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+.cardRole {
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: calc(var(--grid) / 4);
+  letter-spacing: 0.03em;
+}
+
+.cardBio {
+  font-family: var(--ja);
+  color: var(--ink2);
+  line-height: 1.8;
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  padding: 3px calc(var(--grid) / 4);
+  border: 0.5px solid var(--rule2);
+  border-radius: 20px;
+  color: var(--faint);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: calc(var(--grid) * 4);
+  }
+}

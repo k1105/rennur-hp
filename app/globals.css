@@ -1,33 +1,41 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --bg: #0a0a0a;
+  --ink: #f0ede8;
+  --ink2: #c8c5be;
+  --muted: #8a877f;
+  --faint: #5c5a54;
+  --rule: rgba(240, 237, 232, 0.08);
+  --rule2: rgba(240, 237, 232, 0.15);
+  --ja: "Noto Sans JP";
+  --en: "DM Mono", monospace;
+  --grid: 5vw;
+}
+
+html {
+  overflow: hidden;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--ink);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html.lenis {
+  overflow: clip;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
 a {
@@ -35,8 +43,136 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.root {
+  font-family: var(--en);
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── shared ── */
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lbl {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.div {
+  border: none;
+  border-top: 0.5px solid var(--rule);
+  margin: var(--grid) 0;
+}
+
+.ja-t {
+  font-family: var(--ja);
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.en-sub {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: var(--grid);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.ja-prose {
+  font-family: var(--ja);
+  line-height: 2.2;
+  color: var(--ink2);
+  margin-bottom: calc(var(--grid) / 4);
+}
+
+.ja-prose strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.en-prose {
+  line-height: 2.1;
+  color: var(--faint);
+  margin-bottom: calc(var(--grid) / 2);
+  font-weight: 300;
+  border-left: 1.5px solid var(--rule2);
+  padding-left: calc(var(--grid) / 2);
+}
+
+.cta-btn {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  border-bottom: 0.5px solid var(--ink);
+  padding-bottom: 1px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  opacity: 0.45;
+}
+
+.global-text-xl {
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.global-text-lg {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.global-text-md {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.global-text-sm {
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.global-text-xs {
+  font-size: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --grid: 10vw;
+  }
+
+  .global-text-xl {
+    font-size: 1.2rem;
+  }
+  .global-text-lg {
+    font-size: 0.9rem;
+  }
+  .global-text-md {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  .global-text-sm {
+    font-size: 0.55rem;
+    line-height: 1.2;
+  }
+  .global-text-xs {
+    font-size: 0.4rem;
   }
 }

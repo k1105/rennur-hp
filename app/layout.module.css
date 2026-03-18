@@ -1,0 +1,26 @@
+/* ── hero ── */
+.hero {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.logoWrap {
+  width: 100%;
+  max-width: calc(var(--grid) * 8);
+  padding: 0 calc(var(--grid) / 2);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,22 @@
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--grid) / 4) var(--grid);
+  border-top: 0.5px solid var(--rule);
+  margin-top: auto;
+}
+
+.foot span {
+  color: var(--faint);
+  letter-spacing: 0.04em;
+}
+
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink);
+  margin-right: 6px;
+  vertical-align: middle;
+}

@@ -1,0 +1,67 @@
+.tagline {
+  font-family: var(--ja);
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.taglineEn {
+  font-weight: 300;
+  color: var(--faint);
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-top: calc(var(--grid) / -2);
+}
+
+/* ── body sections ── */
+.body {
+  max-width: calc(var(--grid) * 12);
+  padding: 0 var(--grid) calc(var(--grid) * 2);
+  width: 100%;
+  margin: 0;
+}
+
+.main {
+  padding-top: 100vh;
+}
+
+.section {
+  padding-top: calc(var(--grid) * 2);
+}
+
+/* ── axis grid ── */
+.axisGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--grid) / 4);
+}
+
+.ax {
+  cursor: default;
+}
+
+.axName {
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: calc(var(--grid) / 4);
+  letter-spacing: 0.03em;
+}
+
+.axJa {
+  font-family: var(--ja);
+  color: var(--ink2);
+  line-height: 1.6;
+  margin-bottom: 3px;
+}
+
+.axEn {
+  color: var(--faint);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .axisGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,25 @@
+.nav {
+  position: fixed;
+  bottom: calc(var(--grid) / 2);
+  right: calc(var(--grid) / 2);
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--grid) / 4);
+  z-index: 20;
+}
+
+.link {
+  color: var(--faint);
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: color 0.15s;
+  background: none;
+  border: none;
+  font-family: var(--en);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: var(--ink);
+}
