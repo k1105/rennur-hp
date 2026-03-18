@@ -1,28 +1,34 @@
 .section {
-  max-width: calc(var(--grid) * 8);
-  min-height: calc(100vh - 5rem - var(--grid) * 2 - var(--grid) / 4 - var(--grid) / 4);
+  max-width: none;
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--bg);
+  margin-left: calc(var(--grid) * -1);
+  padding: calc(var(--grid) * 2) var(--grid);
+  width: 100vw;
 }
 
 /* ── cta ── */
 .ctaWrap {
+  max-width: calc(var(--grid) * 8);
   margin-bottom: calc(var(--grid) / 4);
 }
 
 .ctaJa {
   font-family: var(--ja);
   line-height: 2.1;
-  color: var(--ink2);
+  color: var(--bg);
   margin-bottom: calc(var(--grid) / 4);
 }
 
 .ctaJa strong {
   font-weight: 600;
-  color: var(--ink);
+  color: var(--bg);
 }
 
 .ctaEn {
   line-height: 1.9;
-  color: var(--faint);
+  color: var(--muted);
   margin-bottom: calc(var(--grid) / 4);
   font-weight: 300;
 }
@@ -30,4 +36,17 @@
 .ctaLinks {
   display: flex;
   gap: calc(var(--grid) / 4);
+}
+
+.ctaLinks a {
+  color: var(--bg);
+  border-bottom-color: var(--bg);
+}
+
+.ctaLinks a:hover {
+  opacity: 0.45;
+}
+
+.lbl {
+  color: var(--muted);
 }

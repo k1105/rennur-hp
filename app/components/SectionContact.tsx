@@ -3,7 +3,7 @@ import s from "./SectionContact.module.css";
 export default function SectionContact() {
   return (
     <section id="contact" className={s.section}>
-      <p className="lbl global-text-lg">Work with us</p>
+      <p className={`lbl global-text-lg ${s.lbl}`}>Work with us</p>
       <div className={s.ctaWrap}>
         <p className={`${s.ctaJa} global-text-md`}>
           rennurは現在、

@@ -1,5 +1,5 @@
 .body {
-  padding: 0 var(--grid) calc(var(--grid) * 2);
+  padding: 0 var(--grid) 0;
   width: 100%;
   margin: 0;
 }
