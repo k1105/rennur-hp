@@ -30,6 +30,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 a {
