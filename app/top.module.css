@@ -1,5 +1,4 @@
 .body {
-  max-width: calc(var(--grid) * 15);
   padding: 0 var(--grid) calc(var(--grid) * 2);
   width: 100%;
   margin: 0;
@@ -10,5 +9,5 @@
 }
 
 .section {
-  padding-top: 5rem;
+  padding-top: calc(var(--grid) * 4);
 }

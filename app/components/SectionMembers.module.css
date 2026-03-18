@@ -1,7 +1,11 @@
+.section {
+  max-width: calc(var(--grid) * 18);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: calc(var(--grid) / 4);
+  gap: var(--grid);
 }
 
 .card {
@@ -27,7 +31,6 @@
 
 .cardNameJa {
   font-family: var(--ja);
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 2px;
 }
