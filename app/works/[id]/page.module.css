@@ -15,6 +15,7 @@
 
 .heroThumbnail {
   object-fit: cover;
+  z-index: 11;
 }
 
 .content {
@@ -98,6 +99,7 @@
 
 .galleryImg {
   object-fit: cover;
+  z-index: 11;
 }
 
 @media (max-width: 768px) {
