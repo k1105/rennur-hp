@@ -23,7 +23,7 @@ export default async function WorkPage({
   if (!work) notFound();
 
   return (
-    <div className={s.body}>
+    <div className={s.body} data-page="works-detail">
       <div className={s.hero}>
         <div className={s.heroImg}>
           <Image

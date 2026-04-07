@@ -65,6 +65,11 @@ a {
   flex-direction: column;
 }
 
+/* ── works-detail: dim logo ── */
+body:has([data-page="works-detail"]) .site-hero {
+  opacity: 0.3;
+}
+
 /* ── shared ── */
 .page {
   flex: 1;

@@ -24,7 +24,7 @@ export default function RootLayout({
         <Suspense>
           <GridOverlay />
         </Suspense>
-        <div className={s.hero}>
+        <div className={`${s.hero} site-hero`}>
           <div className={s.logoWrap}>
             <Image
               src="/logo.svg"
