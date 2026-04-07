@@ -28,6 +28,7 @@
 
 .thumbnail {
   object-fit: cover;
+  z-index: 11;
 }
 
 .cardBody {
