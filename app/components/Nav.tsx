@@ -5,6 +5,7 @@ import s from "./Nav.module.css";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
+  { label: "Works", href: "#works" },
   { label: "Members", href: "#members" },
 ];
 
