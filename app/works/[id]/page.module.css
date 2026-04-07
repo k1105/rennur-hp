@@ -3,7 +3,7 @@
 }
 
 .hero {
-  padding-top: calc(var(--grid) * 4);
+  padding-top: calc(var(--grid) * 2);
 }
 
 .heroImg {
@@ -104,8 +104,23 @@
 }
 
 @media (max-width: 768px) {
+  .body {
+    padding: 0;
+  }
+
+  .hero {
+    padding-top: var(--grid);
+  }
+
+  .heroImg {
+    width: 100vw;
+    aspect-ratio: auto;
+  }
+
   .content {
     max-width: 100%;
+    padding-left: var(--grid);
+    padding-right: var(--grid);
   }
 
   .creditLine {
