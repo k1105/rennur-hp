@@ -34,7 +34,7 @@ export const WORKS: Work[] = [
     credit: [
       { role: "Performance", name: "hatakanata (hatake + kanata)" },
       { role: "Fixture Design", name: "門田健嗣 / Kenjy Monden" },
-      { role: "System Development", name: "北島慎也 / Kitajima Shinya" },
+      { role: "System Development", name: "山岸奏大 / Yamagishi Kanata, 北島慎也 / Kitajima Shinya" },
       { role: "Special Thanks", name: "小峯愛華 / Komine Manaka" },
     ],
   },
